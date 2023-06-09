@@ -1,5 +1,28 @@
 # tutorial Azure - DevOps
 
+Azure DevOps
+    - Organization:  AngelCastro-org1
+    - project:   project-angel-test  (Private)
+    - Project description:  Proyecto de Azure DevOps que incluye todo el ciclo de desarrollo para una aplicacion vue.js
+    - link: https://dev.azure.com/AngelCastro-org1/project-angel-test
+
+# Aplicacion web
+
+##  creacion Proyecto Vue.js
+    $ npm install -g @vue/cli
+    $ npm install -g npm@9.7.1
+    $ vue create app-angel-test
+    $ cd app-angel-test/
+    $ npm run serve
+
+    App running at:
+    - Local:   http://localhost:8080/ 
+
+    Ejecutamos el modo producción de Vue
+    $ npm run build
+
+
+
 ## prueba Tecnica DevOps - Samtel  
 link repo prueba:  https://github.com/JefryGG1K91/first-filter
 
@@ -53,11 +76,7 @@ Compartir repositorio de github publico para evaluación
 
 ### Task Index
 
-Azure DevOps
-    - Organization:  AngelCastro-org1
-    - project:   project-angel-test  (Private)
-    - Project description:  Proyecto de Azure DevOps que incluye todo el ciclo de desarrollo para una aplicacion vue.js
-    - link: https://dev.azure.com/AngelCastro-org1/project-angel-test
+
 
 
 
