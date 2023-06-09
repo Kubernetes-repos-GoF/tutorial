@@ -1,6 +1,7 @@
 # tutorial Azure - DevOps
 
-## prueba Tecnica DevOps - Samtel
+## prueba Tecnica DevOps - Samtel  
+link repo prueba:  https://github.com/JefryGG1K91/first-filter
 
 ## Prueba-Dummy
 
@@ -51,6 +52,15 @@ Compartir repositorio de github publico para evaluación
 
 
 ### Task Index
+
+Azure DevOps
+    - Organization:  AngelCastro-org1
+    - project:   project-angel-test  (Private)
+    - Project description:  Proyecto de Azure DevOps que incluye todo el ciclo de desarrollo para una aplicacion vue.js
+    - link: https://dev.azure.com/AngelCastro-org1/project-angel-test
+
+
+
 
 0. Crear Script Bash:  
     - Hola mundo x10  
