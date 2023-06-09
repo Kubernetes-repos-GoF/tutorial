@@ -1,10 +1,10 @@
 # tutorial Azure - DevOps
 
-Azure DevOps
-    - Organization:  AngelCastro-org1
-    - project:   project-angel-test  (Private)
-    - Project description:  Proyecto de Azure DevOps que incluye todo el ciclo de desarrollo para una aplicacion vue.js
-    - link: https://dev.azure.com/AngelCastro-org1/project-angel-test
+Azure DevOps   
+    - Organization:  AngelCastro-org1  
+    - project:   project-angel-test  (Private)  
+    - Project description:  Proyecto de Azure DevOps que incluye todo el ciclo de desarrollo para una aplicacion vue.js  
+    - link: https://dev.azure.com/AngelCastro-org1/project-angel-test  
 
 # Aplicacion web
 
