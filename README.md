@@ -24,6 +24,7 @@ Utiliza un repositorio del siguiente link del apartado de framework https://docs
 # Aplicacion web
 
 ##  creacion Proyecto Vue.js
+
     $ npm install -g @vue/cli
     $ npm install -g npm@9.7.1
     $ vue create app-angel-test
@@ -37,7 +38,6 @@ Utiliza un repositorio del siguiente link del apartado de framework https://docs
     $ npm run build
 
 
-
 ## Correr contenedor SonarQube (local)
 
 3. Compila la aplicación luego de pasar el analisis de sonarqube.  
@@ -46,17 +46,20 @@ Utiliza un repositorio del siguiente link del apartado de framework https://docs
 Se utiliza para evaluar la calidad de codigo (linter) y cobertura de pruebas (CodeCoverage). 
 
 Se levanta el contenedor para no hacer la instalación en el computador.:
-    - Teniendo Docker instalado
-    - Crear carpeta local con permisos de lectura y escritura, para los volumenes persistentes de los contenedores
+    - Teniendo Docker instalado   
+    - Crear carpeta local con permisos de lectura y escritura, para los volumenes persistentes de los contenedores   
     - Bajar el docker-compose.yml de SonarQube y guardarlo en la carpeta creada
-    - Luego ejecutar (desde la ruta de la carpeta) 
+    - Luego ejecutar (desde la ruta de la carpeta)  
+
         $ docker-compose up
         $ docker ps
-    - la interfaz grafica se despliega en local:   http://localhost:9000
-    - Para vincular con la applicacion web (trabajada), crear el archivo: sonar-project.properties
-    - Install sonar-scanner
+
+    - la interfaz grafica se despliega en local:   http://localhost:9000  
+    - Para vincular con la applicacion web (trabajada), crear el archivo: sonar-project.properties   
+    - Install sonar-scanner   
     - Run:   
-        $sonar-scanner
+
+        $  sonar-scanner
 
 
 ## Crear Dockerfile
@@ -64,18 +67,19 @@ Se levanta el contenedor para no hacer la instalación en el computador.:
 5. Genera una imagen de docker y sube la imagen a dockerhub. 
 
 Crear nginx.default.conf  
-    $ docker build -t angel-test .   
-    $ docker images  
-    $ docker run -d angel-test   
-    $ docker ps  
-    $ docker exec -it <containerId> sh  
-    $ docker run -it -p 8080:80 --rm --name angel-test angel-test   
 
+    $ docker build -t angel-test . 
+    $ docker images
+    $ docker run -d angel-test 
+    $ docker ps
+    $ docker exec -it <containerId> sh
+    $ docker run -it -p 8080:80 --rm --name angel-test angel-test
 
 
 6. Dentro del pipeline ejecute lo siguiente en bash o powershell. a. Imprime Hola Mundo 10 veces en pantalla con un job paralelo. b. Script que cree 10 archivos con la fecha y luego lo imprima en consola  
 
-Azure DevOps   
+## Azure DevOps   
+
     - Organization:  AngelCastro-org1  
     - project:   project-angel-test  (Private)  
     - Project description:  Proyecto de Azure DevOps que incluye todo el ciclo de desarrollo para una aplicacion vue.js  
