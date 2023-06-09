@@ -21,7 +21,29 @@ Azure DevOps
     Ejecutamos el modo producción de Vue
     $ npm run build
 
+## Crear Dockerfile
 
+Crear nginx.default.conf
+$ docker build -t angel-test .
+$ docker images
+$ docker run -d angel-test
+$ docker ps
+$ docker exec -it <containerId> sh
+$ docker run -it -p 8080:80 --rm --name angel-test angel-test
+
+## Correr contenedor SonarQube (local)
+
+Se levanta el contenedor para no hacer la instalación en el computador.
+
+Bajar el docker-compose.yml de SonarQube
+$ docker-compose up
+$ docker ps
+
+http://localhost:9000
+
+Crear el archivo: sonar-project.properties
+Install sonar-scanner
+Run: sonar-scanner
 
 ## prueba Tecnica DevOps - Samtel  
 link repo prueba:  https://github.com/JefryGG1K91/first-filter
