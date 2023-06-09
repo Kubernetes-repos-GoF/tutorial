@@ -1,10 +1,25 @@
-# tutorial Azure - DevOps
+# tutorial Azure - DevOps  
 
-Azure DevOps   
-    - Organization:  AngelCastro-org1  
-    - project:   project-angel-test  (Private)  
-    - Project description:  Proyecto de Azure DevOps que incluye todo el ciclo de desarrollo para una aplicacion vue.js  
-    - link: https://dev.azure.com/AngelCastro-org1/project-angel-test  
+## prueba Tecnica DevOps - Samtel  
+link repo prueba:  https://github.com/JefryGG1K91/first-filter
+
+
+## Contar con las siguientes herramientas instaladas.
+
+Sonarqube  
+Organización de azure DevOps.  
+Docker.  
+Azure Agent Pool SelfHosted   
+Kubernetes   
+Minikube / Hypervisor / Nube con conexión a Azure DevOps   
+Utiliza un repositorio del siguiente link del apartado de framework https://docs.docker.com/samples/   
+
+
+## Procedimento
+
+1. Descarga los archivos del repositorio elegido.  
+2. Instala el framework necesario en caso de no tenerlo.  
+
 
 # Aplicacion web
 
@@ -21,59 +36,57 @@ Azure DevOps
     Ejecutamos el modo producción de Vue
     $ npm run build
 
-## Crear Dockerfile
 
-Crear nginx.default.conf  
-$ docker build -t angel-test .   
-$ docker images  
-$ docker run -d angel-test   
-$ docker ps  
-$ docker exec -it <containerId> sh  
-$ docker run -it -p 8080:80 --rm --name angel-test angel-test   
 
 ## Correr contenedor SonarQube (local)
+
+3. Compila la aplicación luego de pasar el analisis de sonarqube.  
+4. Agregar dos escenarios 1 - analisis fallido | 2 - analisis exitoso  
 
 Se utiliza para evaluar la calidad de codigo (linter) y cobertura de pruebas (CodeCoverage). 
 
 Se levanta el contenedor para no hacer la instalación en el computador.:
-- Teniendo Docker instalado
-- Crear carpeta local con permisos de lectura y escritura, para los volumenes persistentes de los contenedores
-- Bajar el docker-compose.yml de SonarQube y guardarlo en la carpeta creada
-- Luego ejecutar (desde la ruta de la carpeta) 
-    $ docker-compose up
-    $ docker ps
-- la interfaz grafica se despliega en local:   http://localhost:9000
-- Para vincular con la applicacion web (trabajada), crear el archivo: sonar-project.properties
-- Install sonar-scanner
-- Run: 
-    $sonar-scanner
+    - Teniendo Docker instalado
+    - Crear carpeta local con permisos de lectura y escritura, para los volumenes persistentes de los contenedores
+    - Bajar el docker-compose.yml de SonarQube y guardarlo en la carpeta creada
+    - Luego ejecutar (desde la ruta de la carpeta) 
+        $ docker-compose up
+        $ docker ps
+    - la interfaz grafica se despliega en local:   http://localhost:9000
+    - Para vincular con la applicacion web (trabajada), crear el archivo: sonar-project.properties
+    - Install sonar-scanner
+    - Run:   
+        $sonar-scanner
 
-## prueba Tecnica DevOps - Samtel  
-link repo prueba:  https://github.com/JefryGG1K91/first-filter
 
-## Prueba-Dummy
+## Crear Dockerfile
 
-## Contar con las siguientes herramientas instaladas.
+5. Genera una imagen de docker y sube la imagen a dockerhub. 
 
-Sonarqube  
-Organización de azure DevOps.  
-Docker.  
-Azure Agent Pool SelfHosted  
-Kubernetes  
-Minikube / Hypervisor / Nube con conexión a Azure DevOps  
-Utiliza un repositorio del siguiente link del apartado de framework https://docs.docker.com/samples/  
+Crear nginx.default.conf  
+    $ docker build -t angel-test .   
+    $ docker images  
+    $ docker run -d angel-test   
+    $ docker ps  
+    $ docker exec -it <containerId> sh  
+    $ docker run -it -p 8080:80 --rm --name angel-test angel-test   
 
-### Procedimento
 
-Descarga los archivos del repositorio elegido.  
-Instala el framework necesario en caso de no tenerlo.  
-Compila la aplicación luego de pasar el analisis de sonarqube.  
-Agregar dos escenarios 1 - analisis fallido | 2 - analisis exitoso  
-Genera una imagen de docker y sube la imagen a dockerhub.  
-Dentro del pipeline ejecute lo siguiente en bash o powershell. a. Imprime Hola Mundo 10 veces en pantalla con un job paralelo. b. Script que cree 10 archivos con la fecha y luego lo imprima en consola  
-Despliega la app a un clúster de kubernetes (minikube o EKS o AKS).  
-Crea un endpoint externo accesible (ingress) para la aplicación  
-Sube al repo en una carpeta environment todos los yaml de k8s.  
+
+6. Dentro del pipeline ejecute lo siguiente en bash o powershell. a. Imprime Hola Mundo 10 veces en pantalla con un job paralelo. b. Script que cree 10 archivos con la fecha y luego lo imprima en consola  
+
+Azure DevOps   
+    - Organization:  AngelCastro-org1  
+    - project:   project-angel-test  (Private)  
+    - Project description:  Proyecto de Azure DevOps que incluye todo el ciclo de desarrollo para una aplicacion vue.js  
+    - link: https://dev.azure.com/AngelCastro-org1/project-angel-test  
+
+
+7.  Despliega la app a un clúster de kubernetes (minikube o EKS o AKS).  
+8. Crea un endpoint externo accesible (ingress) para la aplicación  
+9. Sube al repo en una carpeta environment todos los yaml de k8s. 
+
+
 ### Que se espera del ejercicio
 
 Configuración de la infraestructura desde cero.
@@ -100,10 +113,6 @@ Compartir repositorio de github publico para evaluación
 
 
 ### Task Index
-
-
-
-
 
 
 0. Crear Script Bash:  
